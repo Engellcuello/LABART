@@ -1,0 +1,173 @@
+
+
+
+.contenedor_bucador{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 0%;
+    margin-bottom: 1%;
+}
+
+.cabeza_buscador_explorar {
+    width: 54.5%;
+    height: 50px;
+    border: 4px solid #76ABAE;
+    border-radius: 50px;
+}
+
+
+.buscador_explorar {
+    margin-top: 0.4%;
+    margin-left: 45px;
+    font-size: 20px;
+    margin: 2px solid #76ABAE;
+}
+
+.contenedor_detalles{
+    z-index: 10 !important;
+}
+
+.icon_setting_explorar {
+    position: absolute;
+    margin-left: 49.5%;
+    margin-top: 0.2%;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.buscar_explorar {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+    height: 45px;
+    font-size: 25px;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+    -webkit-text-fill-color: initial;
+}
+  
+
+.buscar_explorar::-webkit-search-cancel-button {
+    display: none;
+    /* Oculta el botón de limpiar texto */
+}
+
+.buscar_explorar::placeholder {
+margin-left: 14px;
+font-size: 25px;
+}
+
+.icon_buscar_explorar {
+margin-top: 0.8%;
+margin-left: -40px;
+cursor: pointer;
+background-color: transparent;
+border: none;
+}
+
+.fa-magnifying-glass{
+    font-size: 30px;
+}
+
+.filas_tarjetas_categorias {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en múltiples filas si es necesario */
+    align-items: center; /* Centra las tarjetas verticalmente en su contenedor padre */
+    justify-content: center;
+    gap: 4%;
+    padding-bottom: 40px;
+}
+
+.card_categoria {
+    position: relative;
+    width: 20%; /* Ajusta el tamaño según tus necesidades */
+    aspect-ratio: 3 / 4; /* Define una proporción cuadrada (1:1) */
+    max-height: 15%; /* Ajusta la altura máxima según tus necesidades */
+    margin-top: 2%;
+    border-radius: 25px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* Organiza el contenido verticalmente */
+    justify-content: flex-end; /* Alinea el contenido en la parte inferior */
+}
+
+
+
+.imagenes_categorias {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenedor_tittle_categoria_fila {
+    position: absolute;
+    bottom: 0; /* Coloca el contenedor en la parte inferior de la tarjeta */
+    width: 100%;
+    height: 30%; /* Ajusta la altura del contenedor del título según tus necesidades */
+    text-align: center; /* Alinea el texto horizontalmente al centro */
+    transition: height 0.5s ease, background 0.5s ease; /* Transiciones suaves para altura y fondo */
+    overflow: hidden; /* Asegura que los pseudo-elementos no se salgan del contenedor */
+}
+
+.card_categoria:hover .contenedor_tittle_categoria_fila {
+    height: 100%; /* Aumenta la altura del contenedor del título al hacer hover */
+}
+
+.contenedor_tittle_categoria_fila::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 20%, rgba(0, 0, 0, 0) 80%);
+    backdrop-filter: blur(8px); /* Aplica el desenfoque más intenso en el centro */
+    z-index: 0; /* Asegura que esté detrás del texto */
+    transition: background 0.5s ease; /* Transición suave para el fondo del pseudo-elemento */
+}
+
+.card_categoria:hover .contenedor_tittle_categoria_fila::before {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 25%, rgba(0, 0, 0, 0) 90%); /* Gradiente invertido al hacer hover */
+
+}
+
+.contenedor_tittle_categoria_fila::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 80%);    
+    backdrop-filter: blur(1px); /* Aplica el desenfoque más intenso en el centro */
+    z-index: 0; /* Asegura que esté detrás del texto */
+}
+.titulo_categorias {
+    color: #fff; /* Color del texto */
+    font-size: 1.8em; /* Ajusta el tamaño del texto según tus necesidades */
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6); /* Agrega una sombra al texto para que se lea mejor */
+    margin: 0; /* Elimina el margen por defecto del h3 */
+    position: relative; /* Establece posición relativa para usar transformaciones */
+    top: 50%; /* Mueve el texto al centro verticalmente */
+    transform: translateY(-50%); /* Ajusta el texto verticalmente para centrarlo */
+}
+
+
+.contendor_tittle_principal{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lemon", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    color: #232c2c;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traductor de Google</title>
+    <style>
+        /* Ocultar la barra de notificación de Google Translate */
+        .skiptranslate > iframe.skiptranslate {
+            display: none !important; /* Oculta el iframe del traductor */
+        }
+        body {
+            top: 0px !important; /* Asegura que no se mueva el contenido de la página */
+        }
+        .language-button {
+            margin: 5px;
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50; /* Color de fondo verde */
+            color: white; /* Color del texto */
+            cursor: pointer; /* Cambia el cursor a puntero */
+            border-radius: 5px; /* Bordes redondeados */
+        }
+        .language-button:hover {
+            background-color: #45a049; /* Color de fondo al pasar el ratón */
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Seleccionar idioma</h3>
+
+    <div id="google_translate_element" class="google"></div>
+
+    <button class="language-button" onclick="changeLanguage('es')">Español</button>
+    <button class="language-button" onclick="changeLanguage('en')">Inglés</button>
+    <button class="language-button" onclick="changeLanguage('fr')">Francés</button>
+    <button class="language-button" onclick="changeLanguage('de')">Alemán</button>
+    <button class="language-button" onclick="changeLanguage('it')">Italiano</button>
+    <button class="language-button" onclick="changeLanguage('pt')">Portugués</button>
+    <button class="language-button" onclick="changeLanguage('ca')">Catalán</button>
+    <button class="language-button" onclick="changeLanguage('eu')">Euskera</button>
+    <button class="language-button" onclick="changeLanguage('gl')">Gallego</button>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+
+        // Cambiar el idioma y guardar la selección en localStorage
+        function changeLanguage(lang) {
+            const googleTranslateFrame = document.querySelector('iframe.goog-te-menu-frame');
+
+            if (googleTranslateFrame) {
+                const select = googleTranslateFrame.contentWindow.document.querySelector('.skiptranslate select');
+                if (select) {
+                    select.value = lang; // Cambiar el valor del select
+                    select.dispatchEvent(new Event('change')); // Disparar el evento 'change'
+                    saveLanguage(lang); // Guardar el idioma en localStorage
+                }
+            }
+        }
+
+        // Guardar el idioma seleccionado en el localStorage
+        function saveLanguage(lang) {
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        // Cargar el idioma guardado al cargar la página
+        function loadSavedLanguage() {
+            const savedLanguage = localStorage.getItem('selectedLanguage');
+            if (savedLanguage) {
+                changeLanguage(savedLanguage); // Cambiar al idioma guardado
+            }
+        }
+
+        // Ejecutar la carga del idioma guardado cuando la página está completamente cargada
+        window.onload = function() {
+            loadSavedLanguage();
+        };
+    </script>
+
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

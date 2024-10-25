@@ -1,0 +1,148 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.home{
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+.chat-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 86%;
+    overflow-y: auto;
+}
+
+.contenido_ia {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 10px;
+    overflow-y: auto;
+    overflow-y:hidden;
+    margin-top:1%;
+}
+.message {
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 20px;
+    max-width: 50%;
+    word-wrap: break-word;
+    background-color: rgba(128, 128, 128, 0.092);
+    box-shadow: 0 0 10px rgba(46, 122, 139, 0.278);
+}
+.peticiones_ia {
+    align-self: flex-end;
+    margin-bottom: 12px;
+}
+
+.contenido_respuesta_ia {
+    align-self: flex-start;
+    margin-bottom: 12px;
+}
+
+.input_container {
+    position: fixed;
+    bottom: 0;
+    width: 66%;
+    padding: 0px 0 20px 0px;
+    margin-left: 9%;
+    text-align: center;
+    background-color: rgb(243, 242, 242);
+    margin-bottom: 100px;
+    z-index: 1; /* Asegura que esté por encima de otros elementos */
+}
+
+.input_ia {
+    flex: 1;
+    padding: 15px 40px 15px 14px;
+    width: 550px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    resize: none; 
+    field-sizing: content;
+    max-height: 60px;
+    scroll-padding-inline-end: 2210px;
+
+}
+
+.input_ia::-webkit-scrollbar {
+    width: 222;
+    /* Ancho del scrollbar */
+    margin-right: -228px;
+}
+
+.input_container button {
+    position: fixed;
+    bottom: 34px;
+    padding: 6px 6px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: -30px;
+}
+
+.icono_enviar{
+    margin-left: -2px;
+    font-size: 14px;
+}
+
+
+@media (min-width: 1920px) and (max-width:1940px){
+
+    .chat-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 90%;
+        overflow-y: auto;
+    }
+
+    .input_ia {
+        padding: 05px 40px 05px 14px;
+        width: 1000px;
+        height: 55px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        resize: none; 
+        field-sizing: content;
+        max-height: 60px;
+        scroll-padding-inline-end: 2210px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .contenido_ia {
+        width: 68%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 10px;
+        overflow-y: auto;
+        overflow-y:hidden;
+        margin-top: 10%;
+    }
+
+    .input_container button {
+        position: absolute;
+        bottom: 34px;
+        margin-top: 500px;
+        padding: 16px 16px;
+        color: #fff;
+        border-radius: 25px;
+        cursor: pointer;
+        margin-left: -45px;
+    }
+
+    .input_container button:hover{
+        padding: 13.8px 12.8px;
+        .icono_enviar{
+            font-size: 20px;
+        }
+    }
+  }

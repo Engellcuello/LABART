@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../../seccions/perfil/css/perfil.css">
+    <link rel="stylesheet" href="../../rs.css" />
+    <script src="https://kit.fontawesome.com/7a51261991.js" crossorigin="anonymous"></script>
+    <title>LABART</title>
+    <link rel="icon" href="../../img/solo_logo.png" type="image/x-icon">
+
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+</head>
+
+<body>
+    <div class="container_all">
+        <nav class="menu_nav">
+            <div class="menu">
+
+                <div class="logo">
+                    <img class="img_logo" src="../../img/concepto logo.png" alt="">
+                </div>
+                <div class="options_menu">
+                    <a href="../../index.html" class="opciones ">
+                        <i class="icons fa-solid fa-house" style="color: #545454;"></i>
+                        <h4>Inicio</h4>
+                    </a>
+                    <a href="../../seccions/Explorar/explorar.html" class="opciones">
+                        <i class="fa-regular fa-compass" style="color: #545454;"></i>
+                        <h4>Explorar</h4>
+                    </a>
+                    <a href="../../seccions/ia/ia.html" class="opciones">
+                        <i class="icons fa-regular fa-lightbulb" style="color: #545454;"></i>
+                        <h4>IA</h4>
+                    </a>
+                    <a href="../../seccions/ArtStudio/ArtStudio.html" class="opciones">
+                        <i class="icons fa-solid fa-palette" style="color: #545454;"></i>
+                        <h4>Crea Tu Arte</h4>
+                    </a>
+                    <div class="opciones" onclick="abrir_guardados()">
+                        <i class="icons fa-regular fa-bookmark" style="color: #545454;"></i>
+                        <h4>Publicaciones Guardadas</h4>
+                    </div>
+                    <h3>Settings</h3>
+                    <a href="../../seccions/perfil/perfil.html" class="opciones">
+                        <i class="icons fa-regular fa-user" style="color: #545454;"></i>
+                        <h4>Mi Perfil</h4>
+                    </a>
+                    <div class="opciones" onclick="mostrar_ajustes()">
+                        <i class="icons fa-solid fa-gear" style="color: #545454;"></i>
+                        <h4>Configuraciones</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="ayuda">
+                        <div class="overlap-group">
+                            <img class="primary-button" src="../../img/primary-button.svg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section>
+            <div class="contenedor_home_perfil">
+                <div class="contenedor_cabecera_perfil">
+                    <div class="parte_foto_perfil">
+                        <div class="imagen_usuario">
+                            <img src="../../img/fotos_usuario/pexels-photo-2876486.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="parte_desccripcion_usuario">
+                        <div class="first_part_perfil">
+                            <div class="nombre_perfil">
+                                @Nombre Usuario
+                            </div>
+                        </div>
+                        <div class="second_part_perfil">
+                            <div class="seccion_num_publicaciones">
+                                313 <br> Publicaciones
+                            </div>
+                            <div class="seccion_num_seguidores">
+                                1991 <br> Reacciones
+                            </div>
+                        </div>
+                        <div class="three_part_perfil">
+                            <div class="texto_descripcion_perfil">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem fugiat aspernatur
+                                    magni.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="separador_cabecera_perfil">
+                    <hr>
+                </div>
+                <div class="seccion_publicaciones_save">
+                    <button class="boton_publicaciones_save boton_publicaciones" id="boton_publicaciones">
+                        Publicaciones
+                    </button>
+                </div>
+
+                <div class="home_columnas" id="home_mis_publicaciones">
+                    <div class="columnas columna1">
+                        <div class="tarjetas">
+                            <div class="tarjeta">
+                                <img src="../../img/publicaciones/img1.jpg" alt="" onclick="mostrar_perfil()">
+                            </div>
+                            <div class="tarjeta">
+                                <img src="../../img/publicaciones/img4.jpg" alt="" onclick="mostrar_perfil()">
+                            </div>
+                            <div class="tarjeta">
+                                <img src="../../img/publicaciones/img7.jpg" alt="" onclick="mostrar_perfil()">
+                            </div>
+                            <div class="tarjeta">
+                                <img src="../../img/publicaciones/img11.jpg" alt="" onclick="mostrar_perfil()">
+                            </div>
+                            <div class="tarjeta">
+                                <img src="../../img/publicaciones/img7.jpg" alt="" onclick="mostrar_perfil()">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columnas columna2">
+                        <div class="tarjetas">
+                            <div class="tarjeta">
+                                <img src="../../img/publicaciones/img2.jpg" alt="" onclick="mostrar_perfil()">
+                            </div>
+                            <div class="tarjeta">
+                                <img src="../../img/publicaciones/img5.jpg" alt="" onclick="mostrar_perfil()">
+                            </div>
+                            <div class="tarjeta">
+                                <img src="../../img/publicaciones/img5.jpg" alt="" onclick="mostrar_perfil()">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columnas">
+                        <div class="tarjetas">
+                            <div class="tarjeta">
+                                <img src="../../img/publicaciones/img3.jpg" alt="" onclick="mostrar_perfil()">
+                            </div>
+                            <div class="tarjeta">
+                                <img src="../../img/publicaciones/img6.jpg" alt="" onclick="mostrar_perfil()">
+                            </div>
+                            <div class="tarjeta tarjeta9">
+                                <img src="../../img/publicaciones/img8.jpg" alt="" onclick="mostrar_perfil()">
+                            </div>
+                            <div class="tarjeta tarjeta9">
+                                <img src="../../img/publicaciones/img12.jpg" alt="" onclick="mostrar_perfil()">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columnas columna4">
+                        <div class="tarjetas">
+                            <div class="tarjeta">
+                                <img src="../../img/publicaciones/img9.jpg" alt="" onclick="mostrar_perfil()">
+                            </div>
+                            <div class="tarjeta">
+                                <img src="../../img/publicaciones/img9.jpg" alt="" onclick="mostrar_perfil()">
+                            </div>
+                            <div class="tarjeta">
+                                <img src="../../img/publicaciones/img9.jpg" alt="" onclick="mostrar_perfil()">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columnas columna5">
+                        <div class="tarjetas">
+                            <div class="tarjeta">
+
+                            </div>
+                            <div class="tarjeta">
+                                <img src="../../img/publicaciones/img10.jpg" alt="" onclick="mostrar_perfil()">
+                            </div>
+                            <div class="tarjeta">
+                                <img src="../../img/publicaciones/img10.jpg" alt="" onclick="mostrar_perfil()">
+                            </div>
+                            <div class="tarjeta">
+                                <img src="../../img/publicaciones/img10.jpg" alt="" onclick="mostrar_perfil()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="contenedor_detalles" id="contenedor_detalles" onclick="nomostrar()">
+        <div class="tarjeta_detalles" onclick="event.stopPropagation();">
+            <div class="first_part_detalles">
+                <div class="half half-left">
+                    <div class="img_descripcion">
+                        <img src="../../img/publicaciones/img10.jpg" alt="" id="miImagen">
+                    </div>
+                    <div class="buton_img">
+                        <button class="botones_imagen">
+                            Descargar
+                        </button>
+                        <button class="botones_imagen">
+                            Compartir
+                        </button>
+                    </div>
+                    <div class="contenedor_part_detalles_img">
+                        <div class="half half-left detall">
+                            <div class="div_detall">
+                                <p class="tittel_descrip">Resolucion</p>
+                                <p class="text_descrip" id="resolucionImagen"></p>
+                            </div>
+                            <div class="div_detall">
+                                <p class="tittel_descrip">Derechos de Autor</p>
+                                <p class="text_descrip">Ningunor</p>
+                            </div>
+                        </div>
+                        <div class="half half-right detall">
+                            <div class="div_detall">
+                                <p class="tittel_descrip">Creado</p>
+                                <p class="text_descrip">20/05/2024</p>
+                            </div>
+                            <div class="div_detall">
+                                <p class="tittel_descrip">Adicionales</p>
+                                <p class="text_descrip">Tecnicas, pinturas, etc.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="half half-right">
+                    <div class="buton_cerrar">
+                            <div class="icon_user_detalles">
+                                <img src="../../img/fotos_usuario/personas-arrogantes-wide.jpg" alt="">
+                                <p>USER_NAME</p>
+                            </div>
+                        
+                        <div class="icon_saves">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <button class="boton_tarjeta" onclick="nomostrar()">
+                            X
+                        </button>
+                    </div>
+                    <div class="tittle_descripcion">
+                        <h2>
+                            Titulo Publicacion
+                        </h2>
+                        <hr>
+                    </div>
+                    <div class="scrool_detalles">
+                        <div class="descripcion_card">
+                            <h3>
+                                Descripcion de la Publicacion
+                            </h3>
+                            <div class="container_description">
+                                <div class="descripcion_tarjeta_texto">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere placeat aut
+                                        exercitationem? Eaque quod illum atque suscipit quas ipsam magnam veritatis a.
+                                        Ex
+                                        qui accusamus beatae sunt, molestiae aliquid enim!
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima corrupti
+                                        reprehenderit sequi animi vel delectus repellendus tempore qui earum, soluta
+                                        provident quidem, tenetur hic ullam quasi. Sequi architecto dicta minus.
+                                    </p>
+                                </div>
+                                <div class="categorias_descripcion">
+                                    <button>Realismo</button>
+                                    <button>paisaje</button>
+                                    <button>fotografia</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detales_card">
+                            <div class="container_description container_comentarios">
+                                <div class="titulo_comentarios">
+                                    <h2>Comentarios</h2>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                                <div class="categorias_descripcion">
+                                    <div class="tarjeta_comentarios">
+                                        <div class="icon_comentario">
+                                            <img src="../../img/fotos_usuario/personas-arrogantes-wide.jpg" alt="">
+                                        </div>
+                                        <div class="contenedor_contenido_reaccion">
+                                            <div class="conenido_comentario">
+                                                <div class="titulo_nombre_comentario">
+                                                    <h3 class="">Carolina</h3>
+                                                </div>
+                                                <div class="texto_contenido_comentario">
+                                                    <h3>Hermosa la imagen asdas asd asd as asda asdsadasd </h3>
+                                                </div>
+                                            </div>
+                                            <div class="detalles_comentario">
+                                                <p>6 meses</p>
+                                                <p class="texto_centro_comentario">Responder</p>
+                                                <i class="fa-regular fa-heart"></i>
+                                                <i class="fa-solid fa-bug icono_reporte">
+                                                    <span class="texto_reaccion reporte_comentario">
+                                                        Reportar comentario
+                                                    </span>
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tarjeta_comentarios">
+                                        <div class="icon_comentario">
+                                            <img src="../../img/fotos_usuario/personas-arrogantes-wide.jpg" alt="">
+                                        </div>
+                                        <div class="contenedor_contenido_reaccion">
+                                            <div class="conenido_comentario">
+                                                <div class="titulo_nombre_comentario">
+                                                    <h3 class="">Carolina</h3>
+                                                </div>
+                                                <div class="texto_contenido_comentario">
+                                                    <h3>Hermosa la imagen asdas asd asd as asda asdsadasd </h3>
+                                                </div>
+                                            </div>
+                                            <div class="detalles_comentario">
+                                                <p>6 meses</p>
+                                                <p class="texto_centro_comentario">Responder</p>
+                                                <i class="fa-regular fa-heart"></i>
+                                                <i class="fa-solid fa-bug icono_reporte">
+                                                    <span class="texto_reaccion reporte_comentario">
+                                                        Reportar comentario
+                                                    </span>
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tarjeta_comentarios">
+                                        <div class="icon_comentario">
+                                            <img src="../../img/fotos_usuario/personas-arrogantes-wide.jpg" alt="">
+                                        </div>
+                                        <div class="contenedor_contenido_reaccion">
+                                            <div class="conenido_comentario">
+                                                <div class="titulo_nombre_comentario">
+                                                    <h3 class="">Carolina</h3>
+                                                </div>
+                                                <div class="texto_contenido_comentario">
+                                                    <h3>Hermosa la imagen asdas asd asd as asda asdsadasd </h3>
+                                                </div>
+                                            </div>
+                                            <div class="detalles_comentario">
+                                                <p>6 meses</p>
+                                                <p class="texto_centro_comentario">Responder</p>
+                                                <i class="fa-regular fa-heart"></i>
+                                                <i class="fa-solid fa-bug icono_reporte">
+                                                    <span class="texto_reaccion reporte_comentario">
+                                                        Reportar comentario
+                                                    </span>
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="publicacion_comentarios">
+                        <div class="primera_publicacion">
+                            <div class="left_publicacion">
+                                <h2># Comentarios</h2>
+                            </div>
+                            <div class="right_publicacion">
+                                <i class="fa-solid fa-heart"></i>
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-thumbs-down"></i>
+                                <h3>75</h3>
+                            </div>
+                            <div class="boton_reaccion_publicacion" id="boton_publicacion_reaccion">
+                                <i class="fa-regular fa-heart"></i>
+                                <span class="texto_reaccion">
+                                    Reaccionar
+                                </span>
+                                <span class="tooltip" id="tooltip">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-thumbs-down"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="segunda_publicacion">
+                            <div class="icon_comentario">
+                                <img src="../../img/fotos_usuario/personas-arrogantes-wide.jpg" alt="">
+                            </div>
+                            <form action="#" method="POST">
+                                <input type="text" class="input_publicar_comentario" placeholder="Añade un comentario">
+                                <button type="submit" class="boton_enviar_comentario">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="second_part_detalles">
+                <div class="contenedor_part_detalles">
+                    <div class="buton_cerrar texto_detalles_mas">
+                        <div class="icon_user_detalles texto_related">
+                            <h1>Imagenes Relacionadas</h1>
+                        </div>
+                        <button class="boton_tarjeta boton_ver_mas">
+                            Ver Mas
+                        </button>
+                    </div>
+                    <div class="fila_detalles">
+                        <div class="celda_detalles"><img src="../../img/publicaciones/img10.jpg" alt="Imagen 1"></div>
+                        <div class="celda_detalles"><img src="../../img/publicaciones/img1.jpg" alt="Imagen 2"></div>
+                        <div class="celda_detalles"><img src="../../img/publicaciones/img2.jpg" alt="Imagen 3"></div>
+                        <div class="celda_detalles"><img src="../../img/publicaciones/img3.jpg" alt="Imagen 4"></div>
+                    </div>
+                    <div class="fila_detalles">
+                        <div class="celda_detalles"><img src="../../img/publicaciones/img10.jpg" alt="Imagen 1"></div>
+                        <div class="celda_detalles"><img src="../../img/publicaciones/img1.jpg" alt="Imagen 2"></div>
+                        <div class="celda_detalles"><img src="../../img/publicaciones/img2.jpg" alt="Imagen 3"></div>
+                        <div class="celda_detalles"><img src="../../img/publicaciones/img3.jpg" alt="Imagen 4"></div>
+                    </div>
+                    <div class="fila_detalles">
+                        <div class="celda_detalles"><img src="../../img/publicaciones/img10.jpg" alt="Imagen 1"></div>
+                        <div class="celda_detalles"><img src="../../img/publicaciones/img1.jpg" alt="Imagen 2"></div>
+                        <div class="celda_detalles"><img src="../../img/publicaciones/img2.jpg" alt="Imagen 3"></div>
+                        <div class="celda_detalles"><img src="../../img/publicaciones/img3.jpg" alt="Imagen 4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor_detalles" id="contenedor_ajustes" onclick="nomostrar_ajustes()">
+
+        <div class="tarjeta_detalles tarjeta_settings contenedor_ajustes_id" onclick="event.stopPropagation();">
+
+            <div class="tittle_settings">
+                <div class="parte_left_tittle_ajustes">
+                    <i class="fa-solid fa-gear icono_settings_set"></i>
+                    <h2 class="titulo_ajustes">
+                        AJUSTES
+                    </h2>
+                </div>
+
+                <div class="parte_right_tittle_ajustes">
+                    <button class="boton_tarjeta" onclick="nomostrar_ajustes()">
+                        X
+                    </button>
+                </div>
+            </div>
+
+            <div class="ajustes_cuenta">
+                <div class="tittle_detalles_cuenta">
+                    <i class="fa-regular fa-user icono_user_setting"></i>
+                    <h2 class="titulo_detalles_cuenta">
+                        Cuenta
+                    </h2>
+                    
+                </div>
+                <hr class="linea_separadora_ajustes">
+                <div class="contenid_ajustes_cuenta">
+                    <div class="contenido_editar_perfil">
+                        <div class="texto_contenido_editar_perfil">
+                            <p class="texto_ajustes_cuenta">
+                                Editar Perfil
+                            </p>
+                        </div>
+                        <div class="flecha_editar_perfil">
+                            <i class="fa-solid fa-greater-than"></i>
+                        </div>
+                    </div>
+                    <div class="contenido_editar_perfil">
+                        <div class="texto_contenido_editar_perfil">
+                            <p class="texto_ajustes_cuenta">
+                                Cambiar Contraseña
+                            </p>
+                        </div>
+                        <div class="flecha_editar_perfil">
+                            <i class="fa-solid fa-greater-than"></i>
+                        </div>
+                    </div>
+                    <div class="contenido_editar_perfil">
+                        <div class="texto_contenido_editar_perfil">
+                            <p class="texto_ajustes_cuenta">
+                                Tus preferencias
+                            </p>
+                        </div>
+                        <div class="flecha_editar_perfil">
+                            <i class="fa-solid fa-greater-than"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="ajustes_cuenta">
+
+                <div class="tittle_detalles_cuenta">
+                    <i class="fa-regular fa-bell"></i>
+                    <h2 class="titulo_detalles_cuenta">
+                        NOTIFICACIONES
+                    </h2>
+                </div>
+
+                <hr class="linea_separadora_ajustes">
+                
+                <div class="contenido_ajustes_cuenta">
+                    <div class="contenido_editar_perfil">
+                        <div class="texto_contenido_editar_perfil">
+                            <p class="texto_ajustes_cuenta">
+                                Mostrar Notificaciones
+                            </p>
+                        </div>
+                        <div class="toglle_notifications">
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <div class="toggle-switch-background">
+                                <div class="toggle-switch-handle"></div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ajustes_cuenta">
+
+                <div class="tittle_detalles_cuenta">
+                    <i class="fa-regular fa-bell"></i>
+                    <h2 class="titulo_detalles_cuenta">
+                        OTROS AJUSTES
+                    </h2>
+                </div>
+
+                <hr class="linea_separadora_ajustes">
+                
+                <div class="contenido_ajustes_cuenta contenedor_idiomas">
+                    <div class="contenido_editar_perfil">
+                        <div class="ajustes_lenguajes">
+                            <button class="cssbuttons-io-button">
+                                Cambiar Lenguaje
+                                <div class="icon" id="chose_language" onclick="mostrar_ajustes_lenguaje()">
+                                <svg
+                                    height="24"
+                                    width="24"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                    fill="currentColor"
+                                    ></path>
+                                </svg>
+                                </div>
+                            </button>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    
+    <div class="contenedor_detalles contenedor_detalles_ajustes" id="contenedor_ajustes_2" onclick="verificarYOcultar_detalles()">
+
+        <div class="tarjeta_detalles tarjeta_settings contenedor_ajustes_id_detale" id="contenedor_ajustes_id_detale" onclick="event.stopPropagation();">
+            
+            <div class="contenido_detalles_lenguaje">
+
+                <div class="tittle_settings">
+                    <div class="parte_left_tittle_ajustes">
+                        <i class="icono_cambio_lenguaje fa-solid fa-earth-americas"></i>
+                        <h2 class="titulo_ajustes">
+                            Cambiar Lenguaje
+                        </h2>
+                    </div>
+
+                    <div class="parte_right_tittle_ajustes">
+                        <button class="boton_tarjeta" onclick="nomostrar_ajustes_lenguaje()">
+                            X
+                        </button>
+                    </div>
+                </div>
+                <div class="band_settings">
+                    <div class="uband banderas" id="language_english" onclick="cambiarIdioma('en')">
+                        <img src="../../img/banderas/band_eeuu.png" alt="">
+                        <h3>
+                            ENGLISH
+                        </h3>                        
+                    </div>
+                    <div class="banderas">
+                        <img src="../../img/banderas/band_spain.png" cambiarIdioma('es') alt="">
+                        <h3>
+                            ESPAÑOL
+                        </h3>   
+                    </div>
+                    <div class="banderas">
+                        <img src="../../img/banderas/band_portugal.png" alt="">
+                        <h3>
+                            PORTUGUES
+                        </h3> 
+                    </div>
+                    <div class="banderas">
+                        <img src="../../img/banderas/band_francia.png" alt="">
+                        <h3>
+                            FRANCES
+                        </h3> 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../index.js"></script>
+</body>
+
+</html>

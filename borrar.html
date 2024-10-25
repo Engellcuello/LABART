@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker with Color History</title>
+    <style>
+        .picker-container {
+            margin: 20px;
+        }
+        .picker_paint {
+            margin-bottom: 20px;
+        }
+        .color-history {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 440px; /* Ajustar al ancho deseado */
+        }
+        .color-box {
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            border: 2px solid #ccc;
+            cursor: pointer;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="picker-container">
+        <input class="picker_paint" type="color" id="color-picker" value="#000000" />
+        <div class="color-history" id="color-history"></div>
+    </div>
+
+    <script>
+        const colorPicker = document.getElementById('color-picker');
+        const colorHistory = document.getElementById('color-history');
+        const MAX_COLORS = 10;
+
+        // Inicializar el historial de colores con cuadros blancos
+        function initializeColorHistory() {
+            for (let i = 0; i < MAX_COLORS; i++) {
+                addColorToHistory('#ffffff');
+            }
+        }
+
+        // Cargar el historial de colores desde localStorage
+        function loadColorHistory() {
+            const colors = JSON.parse(localStorage.getItem('colorHistory')) || [];
+            colorHistory.innerHTML = ''; // Limpiar el contenedor antes de añadir
+            colors.forEach(color => addColorToHistory(color));
+        }
+
+        // Guardar el historial de colores en localStorage
+        function saveColorHistory(colors) {
+            localStorage.setItem('colorHistory', JSON.stringify(colors));
+        }
+
+        // Agregar un color al historial
+        function addColorToHistory(color) {
+            const colorBox = document.createElement('div');
+            colorBox.className = 'color-box';
+            colorBox.style.backgroundColor = color;
+            colorBox.addEventListener('click', () => {
+                colorPicker.value = color;
+            });
+            colorHistory.appendChild(colorBox);
+        }
+
+        // Actualizar el historial con un nuevo color
+        function updateColorHistory(newColor) {
+            let colors = JSON.parse(localStorage.getItem('colorHistory')) || [];
+
+            // Verificar si el color ya está en el historial
+            if (colors.includes(newColor)) {
+                // Actualizar el color del picker si ya está en el historial
+                colorPicker.value = newColor;
+                return;
+            }
+
+            // Insertar el nuevo color al principio y mover los colores existentes hacia abajo
+            colors = [newColor, ...colors];
+            // Limitar a los últimos MAX_COLORS colores
+            if (colors.length > MAX_COLORS) {
+                colors = colors.slice(0, MAX_COLORS);
+            }
+            saveColorHistory(colors);
+            // Actualizar la visualización
+            colorHistory.innerHTML = '';
+            colors.forEach(color => addColorToHistory(color));
+        }
+
+        // Manejar la selección de color
+        colorPicker.addEventListener('change', (e) => {
+            const newColor = e.target.value;
+            updateColorHistory(newColor);
+        });
+
+        // Inicializar el historial al iniciar
+        initializeColorHistory();
+        loadColorHistory();
+    </script>
+</body>
+</html>

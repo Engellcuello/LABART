@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="explorar.css">
+    <script src="https://kit.fontawesome.com/7a51261991.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+
+    <title>LABART</title>
+    <link rel="icon" href="/img/solo_logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="menu">
+
+        <div class="logo">
+            <img class="img_logo" src="/img/concepto logo.png" alt="">
+        </div>
+        <div class="options_menu">
+            <a href="/index.html" class="opciones">
+                <i class=" fa-solid fa-house" style="color: #545454;"></i>
+                <h4 class="">Inicio</h4>
+            </a>
+            <div class="opciones indicador_actual">
+                <div class="indicador_opcion "></div>
+                <i class="icon_selected fa-regular fa-compass"></i>
+                <h4 class="text_selected">Explorar</h4>
+            </div>
+            <a href="/seccions/ia/ia.html" class="opciones">
+                <i class="icons fa-regular fa-lightbulb" style="color: #545454;"></i>
+                <h4 >IA</h4>
+            </a>
+            <a href="/seccions/ArtStudio/ArtStudio.html" class="opciones">
+                <i class="icons fa-solid fa-palette" style="color: #545454;"></i>
+                <h4>Crea Tu Arte</h4>
+            </a>
+            <div class="opciones" onclick="abrir_guardados()">
+                <i class="icons fa-regular fa-bookmark" style="color: #545454;"></i>
+                <h4>Publicaciones Guardadas</h4>
+            </div>
+            <h3>Settings</h3>
+            <a href="/seccions/perfil/perfil.html" class="opciones">
+                <i class="icons fa-regular fa-user" style="color: #545454;"></i>
+                <h4>Mi Perfil</h4>
+            </a>
+            <div class="opciones" onclick="mostrar_ajustes()">
+                <i class="icons fa-solid fa-gear" style="color: #545454;"></i>
+                <h4>Configuraciones</h4>
+            </div>
+        </div>
+        <div class="box">
+            <div class="ayuda">
+                <div class="overlap-group"><img class="primary-button" src="/img/primary-button.svg" /></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="home" id="home">
+
+        <div class="contendor_tittle_principal">
+            <h1>
+                CATEGORIAS
+            </h1>
+        </div>
+
+        <div class="contenedor_bucador">
+            <div class="cabeza_buscador_explorar">
+                <div class="buscador_explorar">
+                    <form action="#" method="GET">
+                        <button class="icon_buscar_explorar" type="submit">
+                            <i class=" fa-solid fa-magnifying-glass" style="color: #000000af;"></i>
+                        </button>
+                        <input class="buscar_explorar" type="search" name="q" placeholder="Buscar" maxlength="56">
+                        <i class="icon_setting_explorar fa-solid fa-sliders" style="color: #000000af;"></i>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor_tarjetas_categorias"> 
+            <div class="filas_tarjetas_categorias">
+                <div class="card_categoria">
+                    <img class="imagenes_categorias" src="/img/Categorias/categoria_fantacia.jpg" alt="">
+                    <div class="contenedor_tittle_categoria_fila">
+                        <h3 class="titulo_categorias">
+                            Fantasia
+                        </h3>
+                    </div>
+                </div>
+                <div class="card_categoria">
+                    <img class="imagenes_categorias" src="/img/Categorias/categoria_animales.jpg" alt="">
+                    <div class="contenedor_tittle_categoria_fila">
+                        <h3 class="titulo_categorias">
+                            Animales
+                        </h3>
+                    </div>
+                </div>
+                <div class="card_categoria">
+                    <img class="imagenes_categorias" src="/img/Categorias/categoria_abstract.jpg" alt="">
+                    <div class="contenedor_tittle_categoria_fila">
+                        <h3 class="titulo_categorias">
+                            Abstracto
+                        </h3>
+                    </div>
+                </div>
+                <div class="card_categoria">
+                    <img class="imagenes_categorias" src="/img/Categorias/categoria_anime.jpg" alt="">
+                    <div class="contenedor_tittle_categoria_fila">
+                        <h3 class="titulo_categorias">
+                            Anime
+                        </h3>
+                    </div>
+                </div>
+                <div class="card_categoria">
+                    <img class="imagenes_categorias" src="/img/Categorias/categoria_arquitecht.jpg" alt="">
+                    <div class="contenedor_tittle_categoria_fila">
+                        <h3 class="titulo_categorias">
+                            Arquitectura
+                        </h3>
+                    </div>
+                </div>
+                <div class="card_categoria">
+                    <img class="imagenes_categorias" src="/img/Categorias/categoria_black and white.jpg" alt="">
+                    <div class="contenedor_tittle_categoria_fila">
+                        <h3 class="titulo_categorias">
+                            Blanco y Negro
+                        </h3>
+                    </div>
+                </div>
+                <div class="card_categoria">
+                    <img class="imagenes_categorias" src="/img/Categorias/categoria_cartoon.jpg" alt="">
+                    <div class="contenedor_tittle_categoria_fila">
+                        <h3 class="titulo_categorias">
+                            Animado
+                        </h3>
+                    </div>
+                </div>
+                <div class="card_categoria">
+                    <img class="imagenes_categorias" src="/img/Categorias/categoria_dibujo.jpg" alt="">
+                    <div class="contenedor_tittle_categoria_fila">
+                        <h3 class="titulo_categorias">
+                            Dibujo
+                        </h3>
+                    </div>
+                </div>
+                <div class="card_categoria">
+                    <img class="imagenes_categorias" src="/img/Categorias/categoria_fondos.jpg" alt="">
+                    <div class="contenedor_tittle_categoria_fila">
+                        <h3 class="titulo_categorias">
+                            Fondos
+                        </h3>
+                    </div>
+                </div>
+                <div class="card_categoria">
+                    <img class="imagenes_categorias" src="/img/Categorias/categoria_paisaje.jpg" alt="">
+                    <div class="contenedor_tittle_categoria_fila">
+                        <h3 class="titulo_categorias">
+                            Paisajes
+                        </h3>
+                    </div>
+                </div>
+                <div class="card_categoria">
+                    <img class="imagenes_categorias" src="/img/Categorias/categoria_realismo.jpg" alt="">
+                    <div class="contenedor_tittle_categoria_fila">
+                        <h3 class="titulo_categorias">
+                            Realismo
+                        </h3>
+                    </div>
+                </div>
+                <div class="card_categoria">
+                    <img class="imagenes_categorias" src="/img/Categorias/categoria_universe.jpg" alt="">
+                    <div class="contenedor_tittle_categoria_fila">
+                        <h3 class="titulo_categorias">
+                            Universo
+                        </h3>
+                    </div>
+                </div>
+                <div class="card_categoria">
+                    <img class="imagenes_categorias" src="/img/Categorias/categoriasci-fi.jpg" alt="">
+                    <div class="contenedor_tittle_categoria_fila">
+                        <h3 class="titulo_categorias">
+                            Ciencia Ficcion
+                        </h3>
+                    </div>
+                </div>
+                <div class="card_categoria">
+                    <img class="imagenes_categorias" src="/img/Categorias/categorias.jpg" alt="">
+                    <div class="contenedor_tittle_categoria_fila">
+                        <h3 class="titulo_categorias">
+                            Impresionismo
+                        </h3>
+                    </div>
+                </div>
+                <div class="card_categoria">
+                    <img class="imagenes_categorias" src="/img/Categorias/categorias1.jpg" alt="">
+                    <div class="contenedor_tittle_categoria_fila">
+                        <h3 class="titulo_categorias">
+                            Arte Digital
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="contenedor_detalles" id="contenedor_ajustes" onclick="nomostrar_ajustes()">
+
+        <div class="tarjeta_detalles tarjeta_settings contenedor_ajustes_id" onclick="event.stopPropagation();">
+
+            <div class="tittle_settings">
+                <div class="parte_left_tittle_ajustes">
+                    <i class="fa-solid fa-gear icono_settings_set"></i>
+                    <h2 class="titulo_ajustes">
+                        AJUSTES
+                    </h2>
+                </div>
+
+                <div class="parte_right_tittle_ajustes">
+                    <button class="boton_tarjeta" onclick="nomostrar_ajustes()">
+                        X
+                    </button>
+                </div>
+            </div>
+
+            <div class="ajustes_cuenta">
+                <div class="tittle_detalles_cuenta">
+                    <i class="fa-regular fa-user icono_user_setting"></i>
+                    <h2 class="titulo_detalles_cuenta">
+                        Cuenta
+                    </h2>
+                    
+                </div>
+                <hr class="linea_separadora_ajustes">
+                <div class="contenid_ajustes_cuenta">
+                    <div class="contenido_editar_perfil">
+                        <div class="texto_contenido_editar_perfil">
+                            <p class="texto_ajustes_cuenta">
+                                Editar Perfil
+                            </p>
+                        </div>
+                        <div class="flecha_editar_perfil">
+                            <i class="fa-solid fa-greater-than"></i>
+                        </div>
+                    </div>
+                    <div class="contenido_editar_perfil">
+                        <div class="texto_contenido_editar_perfil">
+                            <p class="texto_ajustes_cuenta">
+                                Cambiar Contraseña
+                            </p>
+                        </div>
+                        <div class="flecha_editar_perfil">
+                            <i class="fa-solid fa-greater-than"></i>
+                        </div>
+                    </div>
+                    <div class="contenido_editar_perfil">
+                        <div class="texto_contenido_editar_perfil">
+                            <p class="texto_ajustes_cuenta">
+                                Tus preferencias
+                            </p>
+                        </div>
+                        <div class="flecha_editar_perfil">
+                            <i class="fa-solid fa-greater-than"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="ajustes_cuenta">
+
+                <div class="tittle_detalles_cuenta">
+                    <i class="fa-regular fa-bell"></i>
+                    <h2 class="titulo_detalles_cuenta">
+                        NOTIFICACIONES
+                    </h2>
+                </div>
+
+                <hr class="linea_separadora_ajustes">
+                
+                <div class="contenido_ajustes_cuenta">
+                    <div class="contenido_editar_perfil">
+                        <div class="texto_contenido_editar_perfil">
+                            <p class="texto_ajustes_cuenta">
+                                Mostrar Notificaciones
+                            </p>
+                        </div>
+                        <div class="toglle_notifications">
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <div class="toggle-switch-background">
+                                <div class="toggle-switch-handle"></div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ajustes_cuenta">
+
+                <div class="tittle_detalles_cuenta">
+                    <i class="fa-regular fa-bell"></i>
+                    <h2 class="titulo_detalles_cuenta">
+                        OTROS AJUSTES
+                    </h2>
+                </div>
+
+                <hr class="linea_separadora_ajustes">
+                
+                <div class="contenido_ajustes_cuenta contenedor_idiomas">
+                    <div class="contenido_editar_perfil">
+                        <div class="ajustes_lenguajes">
+                            <button class="cssbuttons-io-button">
+                                Cambiar Lenguaje
+                                <div class="icon" id="chose_language" onclick="mostrar_ajustes_lenguaje()">
+                                <svg
+                                    height="24"
+                                    width="24"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                    fill="currentColor"
+                                    ></path>
+                                </svg>
+                                </div>
+                            </button>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="contenedor_detalles contenedor_detalles_ajustes" id="contenedor_ajustes_2" onclick="verificarYOcultar_detalles()">
+
+        <div class="tarjeta_detalles tarjeta_settings contenedor_ajustes_id_detale" id="contenedor_ajustes_id_detale" onclick="event.stopPropagation();">
+            
+            <div class="contenido_detalles_lenguaje">
+
+                <div class="tittle_settings">
+                    <div class="parte_left_tittle_ajustes">
+                        <i class="icono_cambio_lenguaje fa-solid fa-earth-americas"></i>
+                        <h2 class="titulo_ajustes">
+                            Cambiar Lenguaje
+                        </h2>
+                    </div>
+
+                    <div class="parte_right_tittle_ajustes">
+                        <button class="boton_tarjeta" onclick="nomostrar_ajustes_lenguaje()">
+                            X
+                        </button>
+                    </div>
+                </div>
+                <div class="band_settings">
+                    <div class="uband banderas" id="language_english" onclick="cambiarIdioma('en')">
+                        <img src="/img/banderas/band_eeuu.png" alt="">
+                        <h3>
+                            ENGLISH
+                        </h3>                        
+                    </div>
+                    <div class="banderas">
+                        <img src="/img/banderas/band_spain.png" cambiarIdioma('es') alt="">
+                        <h3>
+                            ESPAÑOL
+                        </h3>   
+                    </div>
+                    <div class="banderas">
+                        <img src="/img/banderas/band_portugal.png" alt="">
+                        <h3>
+                            PORTUGUES
+                        </h3> 
+                    </div>
+                    <div class="banderas">
+                        <img src="/img/banderas/band_francia.png" alt="">
+                        <h3>
+                            FRANCES
+                        </h3> 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+</div>
+
+
+</div>
+
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="/index.js"></script>
+</body>
+</html>

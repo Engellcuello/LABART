@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../../rs.css" />
+    <script src="https://kit.fontawesome.com/7a51261991.js" crossorigin="anonymous"></script>
+    <title>LABART</title>
+    <link rel="icon" href="../../img/solo_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../seccions/ia/css/ia.css">
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+</head>
+
+<body>
+    <div class="container_all">
+        <nav class="menu_nav">
+            <div class="menu">
+
+                <div class="logo">
+                    <img class="img_logo" src="../../img/concepto_logo.png" alt="">
+                </div>
+                <div class="options_menu">
+                    <a href="../../index.php" class="opciones">
+                        <i class="icon_selected fa-solid fa-house" style="color: #545454;"></i>
+                        <h4 class="">Inicio</h4>
+                    </a>
+                    <a href="../../Explorar/explorar.html" class="opciones indicador_actual">
+                        <i class="fa-regular fa-compass" style="color: #545454;"></i>
+                        <h4>Explorar</h4>
+                    </a>
+                    <div class="opciones indicador_actual">
+                        <div class="indicador_opcion"></div>
+                        <i class="icon_selected fa-regular fa-lightbulb"></i>
+                        <h4>IA</h4>
+                    </div>
+                    <a href="../../seccions/paint/Paint.html" class="opciones">
+                        <i class="icons fa-solid fa-palette" style="color: #545454;"></i>
+                        <h4>Crea Tu Arte</h4>
+                    </a>
+                    <div class="opciones" onclick="abrir_guardados()">
+                        <i class="icons fa-regular fa-bookmark" style="color: #545454;"></i>
+                        <h4>Publicaciones Guardadas</h4>
+                    </div>
+                    <h3>Settings</h3>
+                    <a class="opciones" href="../../seccions/perfil/perfil.html">
+                        <i class="icon_selected fa-regular fa-user" style="color: #545454;"></i>
+                        <h4>Mi Perfil</h4>
+                    </a>
+                    <div class="opciones" onclick="mostrar_ajustes()">
+                        <i class="icons fa-solid fa-gear" style="color: #545454;"></i>
+                        <h4>Configuraciones</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="ayuda">
+                        <div class="overlap-group"><img class="primary-button" src="../../img/primary-button.svg" /></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+        <section>
+            <div class="home" id="home">
+                <div class="chat-container">
+                    
+                    <div class="contenido_ia">
+                        <div class="message peticiones_ia">
+                            
+                            <div class="contenido_peticion">
+                                1
+                            </div>
+                        </div>
+                        <div class="message contenido_respuesta_ia">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam in ut veritatis maxime officiis, labore eligendi? Id consequuntur, neque doloremque eum sit qui ad veritatis vero rem aut eaque quo, fuga obcaecati delectus voluptatem cumque laboriosam dolorum adipisci enim illum.
+                        </div>
+                        <div class="message peticiones_ia">
+                            <div class="contenido_peticion">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis necessitatibus libero delectus nesciunt veritatis id similique facere vero distinctio perferendis!
+                            </div>
+                        </div>
+                        <div class="message contenido_respuesta_ia">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam in ut veritatis maxime officiis, labore eligendi? Id consequuntur, neque doloremque eum sit qui ad veritatis vero rem aut eaque quo, fuga obcaecati delectus voluptatem cumque laboriosam dolorum adipisci enim illum.
+                        </div>
+                        <div class="message peticiones_ia">
+                            <div class="contenido_peticion">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis necessitatibus libero delectus nesciunt veritatis id similique facere vero distinctio perferendis!
+                            </div>
+                        </div>
+                        <div class="message contenido_respuesta_ia">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam in ut veritatis maxime officiis, labore eligendi? Id consequuntur, neque doloremque eum sit qui ad veritatis vero rem aut eaque quo, fuga obcaecati delectus voluptatem cumque laboriosam dolorum adipisci enim illum.
+                        </div>
+                        <div class="message peticiones_ia">
+                            <div class="contenido_peticion">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis necessitatibus libero delectus nesciunt veritatis id similique facere vero distinctio perferendis!
+                            </div>
+                        </div>
+                        <div class="message contenido_respuesta_ia">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam in ut veritatis maxime officiis, labore eligendi? Id consequuntur, neque doloremque eum sit qui ad veritatis vero rem aut eaque quo, fuga obcaecati delectus voluptatem cumque laboriosam dolorum adipisci enim illum.
+                        </div>
+                        <div class="message peticiones_ia">
+                            <div class="contenido_peticion">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis necessitatibus libero delectus nesciunt veritatis id similique facere vero distinctio perferendis!
+                            </div>
+                        </div>
+                        <div class="message contenido_respuesta_ia">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam in ut veritatis maxime officiis, labore eligendi? Id consequuntur, neque doloremque eum sit qui ad veritatis vero rem aut eaque quo, fuga obcaecati delectus voluptatem cumque laboriosam dolorum adipisci enim illum.
+                        </div>
+                    </div>
+                        
+
+                </div>
+            </div>
+            <div class="input_container">
+                <div class="contenedor_input_ia">
+                    <textarea placeholder="Escribe un mensaje..." id="messageInput" class="input_ia" maxlength="300"></textarea>
+                    <button>
+                        <i class="icono_enviar fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="contenedor_detalles" id="contenedor_ajustes" onclick="nomostrar_ajustes()">
+
+        <div class="tarjeta_detalles tarjeta_settings contenedor_ajustes_id" onclick="event.stopPropagation();">
+
+            <div class="tittle_settings">
+                <div class="parte_left_tittle_ajustes">
+                    <i class="fa-solid fa-gear icono_settings_set"></i>
+                    <h2 class="titulo_ajustes">
+                        AJUSTES
+                    </h2>
+                </div>
+
+                <div class="parte_right_tittle_ajustes">
+                    <button class="boton_tarjeta" onclick="nomostrar_ajustes()">
+                        X
+                    </button>
+                </div>
+            </div>
+
+            <div class="ajustes_cuenta">
+                <div class="tittle_detalles_cuenta">
+                    <i class="fa-regular fa-user icono_user_setting"></i>
+                    <h2 class="titulo_detalles_cuenta">
+                        Cuenta
+                    </h2>
+                    
+                </div>
+                <hr class="linea_separadora_ajustes">
+                <div class="contenid_ajustes_cuenta">
+                    <div class="contenido_editar_perfil">
+                        <div class="texto_contenido_editar_perfil">
+                            <p class="texto_ajustes_cuenta">
+                                Editar Perfil
+                            </p>
+                        </div>
+                        <div class="flecha_editar_perfil">
+                            <i class="fa-solid fa-greater-than"></i>
+                        </div>
+                    </div>
+                    <div class="contenido_editar_perfil">
+                        <div class="texto_contenido_editar_perfil">
+                            <p class="texto_ajustes_cuenta">
+                                Cambiar Contraseña
+                            </p>
+                        </div>
+                        <div class="flecha_editar_perfil">
+                            <i class="fa-solid fa-greater-than"></i>
+                        </div>
+                    </div>
+                    <div class="contenido_editar_perfil">
+                        <div class="texto_contenido_editar_perfil">
+                            <p class="texto_ajustes_cuenta">
+                                Tus preferencias
+                            </p>
+                        </div>
+                        <div class="flecha_editar_perfil">
+                            <i class="fa-solid fa-greater-than"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="ajustes_cuenta">
+
+                <div class="tittle_detalles_cuenta">
+                    <i class="fa-regular fa-bell"></i>
+                    <h2 class="titulo_detalles_cuenta">
+                        NOTIFICACIONES
+                    </h2>
+                </div>
+
+                <hr class="linea_separadora_ajustes">
+                
+                <div class="contenido_ajustes_cuenta">
+                    <div class="contenido_editar_perfil">
+                        <div class="texto_contenido_editar_perfil">
+                            <p class="texto_ajustes_cuenta">
+                                Mostrar Notificaciones
+                            </p>
+                        </div>
+                        <div class="toglle_notifications">
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <div class="toggle-switch-background">
+                                <div class="toggle-switch-handle"></div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ajustes_cuenta">
+
+                <div class="tittle_detalles_cuenta">
+                    <i class="fa-regular fa-bell"></i>
+                    <h2 class="titulo_detalles_cuenta">
+                        OTROS AJUSTES
+                    </h2>
+                </div>
+
+                <hr class="linea_separadora_ajustes">
+                
+                <div class="contenido_ajustes_cuenta contenedor_idiomas">
+                    <div class="contenido_editar_perfil">
+                        <div class="ajustes_lenguajes">
+                            <button class="cssbuttons-io-button">
+                                Cambiar Lenguaje
+                                <div class="icon" id="chose_language" onclick="mostrar_ajustes_lenguaje()">
+                                <svg
+                                    height="24"
+                                    width="24"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                    fill="currentColor"
+                                    ></path>
+                                </svg>
+                                </div>
+                            </button>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    
+    <div class="contenedor_detalles contenedor_detalles_ajustes" id="contenedor_ajustes_2" onclick="verificarYOcultar_detalles()">
+
+        <div class="tarjeta_detalles tarjeta_settings contenedor_ajustes_id_detale" id="contenedor_ajustes_id_detale" onclick="event.stopPropagation();">
+            
+            <div class="contenido_detalles_lenguaje">
+
+                <div class="tittle_settings">
+                    <div class="parte_left_tittle_ajustes">
+                        <i class="icono_cambio_lenguaje fa-solid fa-earth-americas"></i>
+                        <h2 class="titulo_ajustes">
+                            Cambiar Lenguaje
+                        </h2>
+                    </div>
+
+                    <div class="parte_right_tittle_ajustes">
+                        <button class="boton_tarjeta" onclick="nomostrar_ajustes_lenguaje()">
+                            X
+                        </button>
+                    </div>
+                </div>
+                <div class="band_settings">
+                    <div class="uband banderas" id="language_english" onclick="cambiarIdioma('en')">
+                        <img src="../../img/banderas/band_eeuu.png" alt="">
+                        <h3>
+                            ENGLISH
+                        </h3>                        
+                    </div>
+                    <div class="banderas">
+                        <img src="../../img/banderas/band_spain.png" cambiarIdioma('es') alt="">
+                        <h3>
+                            ESPAÑOL
+                        </h3>   
+                    </div>
+                    <div class="banderas">
+                        <img src="../../img/banderas/band_portugal.png" alt="">
+                        <h3>
+                            PORTUGUES
+                        </h3> 
+                    </div>
+                    <div class="banderas">
+                        <img src="../../img/banderas/band_francia.png" alt="">
+                        <h3>
+                            FRANCES
+                        </h3> 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    <script src="../../index.js"></script>
+</body>
+
+</html>
