@@ -1,0 +1,127 @@
+/* notifications.css */
+.notifications-page {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .notifications-container {
+    flex: 1;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .notifications-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .notifications-actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .notifications-actions button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .mark-all-read {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .delete-all {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .notifications-section {
+    margin-bottom: 3rem;
+  }
+  
+  .section-title {
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .notification-item {
+    display: flex;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: background-color 0.2s;
+    position: relative;
+  }
+  
+  .notification-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .notification-item.unread {
+    background-color: #e3f2fd;
+  }
+  
+  .notification-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    align-self: center;
+  }
+  
+  .notification-content {
+    flex: 1;
+  }
+  
+  .notification-message {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+  
+  .notification-time {
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .notification-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+  }
+  
+  .delete-notification {
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    align-self: center;
+    padding: 0.5rem;
+  }
+  
+  .delete-notification:hover {
+    color: #f44336;
+  }
+  
+  .empty-section {
+    color: #666;
+    font-style: italic;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+  }

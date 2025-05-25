@@ -1,0 +1,248 @@
+
+  .fondo-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: aparecer 0.3s ease-out;
+    backdrop-filter: blur(5px);
+    overflow: hidden; /* Esto evita scroll dentro del modal */
+  }
+  
+  .contenido-modal {
+    background-color: white;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .idioma-modal {
+    max-width: 400px;
+  }
+  
+  /* Animación */
+  @keyframes aparecer {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Encabezado */
+  .encabezado-modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .titulo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .titulo-contenedor h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .boton-cerrar {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #777;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .boton-cerrar:hover {
+    color: #333;
+  }
+  
+  /* Iconos */
+  .icono-ajustes {
+    font-size: 20px;
+    color: #555;
+  }
+  
+  /* Contenido */
+  .contenido-ajustes {
+    padding: 0 20px 20px;
+  }
+  
+  /* Secciones */
+  .seccion-ajustes {
+    margin-top: 20px;
+  }
+  
+  .titulo-seccion {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  
+  .titulo-seccion h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+    font-weight: 600;
+  }
+  
+  .icono-seccion {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .divisor {
+    border: none;
+    height: 1px;
+    background-color: #eee;
+    margin: 10px 0;
+  }
+  
+  /* Opciones */
+  .opcion-ajuste {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 6px;
+    padding-left: 10px;
+  }
+  
+  .opcion-ajuste:hover {
+    background-color: #f7f7f7;
+  }
+  
+  .opcion-ajuste span {
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  .opcion-ajuste i {
+    color: #999;
+    font-size: 0.9rem;
+  }
+  
+  /* Interruptor */
+  .interruptor {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+  }
+  
+  .interruptor input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .interruptor {
+    position: relative;
+    display: inline-block;
+    width: 50px;  /* Ancho fijo para el interruptor */
+    height: 24px; /* Altura fija para el interruptor */
+  }
+  
+  .interruptor input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .deslizador {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+  }
+  
+  .deslizador:before {
+    position: absolute;
+    content: "";
+    height: 20px;  /* Aumenté el tamaño para mejor visibilidad */
+    width: 20px;
+    left: 2px;     /* Ajusté la posición inicial */
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sutil sombra para mejor contraste */
+  }
+  
+  input:checked + .deslizador {
+    background-color: #4CAF50;
+  }
+  
+  input:checked + .deslizador:before {
+    transform: translateX(11px); /* Ajusté la distancia del deslizamiento */
+  }
+  
+  /* Opciones de idioma */
+  .opciones-idioma {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .opcion-idioma {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+  }
+  
+  .opcion-idioma:hover {
+    background-color: #f7f7f7;
+  }
+  
+  .opcion-idioma img {
+    width: 30px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .opcion-idioma span {
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  /* Responsive */
+  @media (max-width: 480px) {
+    .contenido-modal {
+      width: 95%;
+    }
+    
+    .encabezado-modal {
+      padding: 15px;
+    }
+    
+    .contenido-ajustes {
+      padding: 0 15px 15px;
+    }
+  }
