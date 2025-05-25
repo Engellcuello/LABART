@@ -1,0 +1,257 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow: scroll;
+}
+
+.canvas_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+
+
+#canvas {
+    width: 40%;
+    height: 50%;
+    display: block; /* Evita márgenes automáticos de elementos inline-block */
+    transform-origin: 0;
+    transform: scale(1) translate(0px, 0px);
+    cursor: grab;
+    border: none;
+}
+
+canvas {
+    background: #fff;
+    /*background-image: url(/dd97062b2fcfab17ee864cbb6890c9c3.jpg);*/
+    background-image: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: silver;
+    padding: 2px;
+    z-index: 10; /* Asegura que la cabecera esté encima del canvas */
+}
+
+.aside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: silver;
+    width: 3%;
+    height: 100%;
+    padding-top: 2%;
+    z-index: 10; /* Asegura que el panel lateral esté encima del canvas */
+    overflow-y: auto; /* Agrega scroll vertical cuando sea necesario */
+}
+
+.aside nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+
+.aside div {
+    width: 80%;
+    height: 30px;
+    display: flex;
+    align-items: center;   
+    justify-content: center; 
+    background: #bdbdbd no-repeat center;
+    border-right-color: #000;
+    border-bottom-color: #000;
+    background-size: cover; /* Ajusta la imagen de fondo al tamaño del botón */
+}
+
+.aside div:hover {
+    box-shadow: 1px 1px black, inset -1px -1px gray, inset 1px 1px white;
+}
+
+.aside div.active {
+    background-color: #5ecce1;
+    border-color: #000;
+    border-right-color: #eee;
+    border-bottom-color: #eee;
+}
+
+.aside div[disabled] {
+    pointer-events: none;
+    opacity: .5;
+}
+
+#erase-btn {
+    background-image: url('./icons/erase.png');
+}
+
+#rectangle-btn {
+    background-image: url('./icons/rectangle.png');
+}
+
+#ellipse-btn {
+    background-image: url('./icons/ellipse.png');
+}
+
+#picker-btn {
+    background-image: url('./icons/picker.png');
+}
+
+#clear-btn {
+    background-image: url('./icons/trash.png');
+    background-size: 18px;
+}
+
+
+.selector_paint {
+    position: absolute; 
+    flex-wrap: wrap;
+    top: 6%; 
+    left: 4%; 
+    z-index: 12; 
+    width: 3%;
+    background-color: rgb(179, 177, 177);
+    border-radius: 5px;
+    
+    padding-top: 10px; padding-bottom: 10px;
+}
+
+.color-history{
+    position: absolute; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 6%; 
+    left: 8%; 
+    z-index: 12; 
+    width: 3%;
+    background-color: rgb(179, 177, 177);
+    border-radius: 5px;
+    padding-top: 5px; padding-bottom: 5px;
+}
+
+.color-history {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 180px; /* Ajustar al ancho deseado */
+}
+.color-box {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.linner_paint{
+    width: 60%;
+    border-radius: 50px;
+    border: 2px solid #818181;
+}
+
+.picker_color{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.picker_paint{
+    border: none transparent;
+    background-color: transparent;
+    -moz-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.picker_paint::-webkit-color-swatch{
+    border-radius: 50px;
+}
+
+.picker_paint:hover::-webkit-color-swatch{
+
+    border: 2px solid white;
+    box-shadow: 0 4px 8px rgba(126, 126, 126, 0.3);
+    transition: border .5s;
+}
+
+.selector_tamano{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+}
+
+.selector_tamano_input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    background-color: #222222;
+    color: rgba(255, 255, 255, 0.822);
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    user-select: none; /* Evita que se seleccione el texto al arrastrar */
+    transition: opacity 0.1s ease; /* Transición suave para el cambio de número */
+    width: 70%;
+    height: 100%;
+}
+
+.selector_tamano_input:active{
+    border: 2px solid #ccc;
+    transition: border .2s ;
+}
+
+.number_tamano_input{
+    font-size: 13px;
+}
+
+
+.linea_historial_color{
+    margin-bottom: 120px;
+}
+
+.historial_color{
+    margin-top: 10px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.historial_color_boton{
+    margin-left: 9px;
+    width: 40px;
+    height: 40px;
+    background-color: #000000;
+    border-radius: 5px;
+    border: 3px solid white;
+    transition: background-color 1s;
+}
+
+.historial_color_boton:hover{
+    background-color: #5ecce1;
+    transition: background-color 1s;
+}

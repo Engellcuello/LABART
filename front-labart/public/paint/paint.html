@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <script src="https://kit.fontawesome.com/7a51261991.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/paint/paint.css">
+</head>
+
+<body>
+
+    <div class="canvas_container" id="canvas-container">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <div class="aside">
+        <nav>
+            <button id="undo-btn"><i><i class="fa-solid fa-rotate-left"></i></i></button>
+            <button id="redo-btn"><i><i class="fa-solid fa-rotate-right"></i></i></button>
+
+            <div class="buton_paint" id="draw-btn" title="Pincel">
+                <i class="fa-solid fa-pencil color_tal"></i>
+            </div>
+            
+            <div class="buton_paint" id="erase-btn" title="Borrar">
+                <i class="fa-solid fa-eraser"></i>
+            </div>
+            <div class="buton_paint" id="rectangle-btn" title="Rectángulo">
+                <i class="fa-regular fa-square"></i>
+            </div>
+            <div class="buton_paint" disabled id="picker-btn" title="Capturar Color">
+                <i class="fa-solid fa-eye-dropper"></i>
+            </div>
+            <div class="buton_paint" id="rellenar-btn" title="rellenar Color">
+                <i class="fa-solid fa-fill-drip"></i>
+            </div>
+            <div class="buton_paint" id="clear-btn" title="Limpiar dibujo">
+                <i class="fa-solid fa-trash"></i>
+            </div>
+
+            <!-- Aquí agregamos el botón de guardar -->
+            <div class="buton_paint" id="save-btn" title="Guardar">
+                <i class="fa-solid fa-save"></i>
+            </div>
+
+            <div class="buton_paint" id="load-image-btn" title="Cargar Imagen">
+                <i class="fa-solid fa-image"></i>
+            </div>
+            
+            <!-- Input oculto para seleccionar la imagen -->
+            <input type="file" id="image-input" accept="image/*" style="display: none;">
+            
+            <!-- Botón para quitar imagen -->
+            <div class="buton_paint" id="remove-image-btn" title="Quitar Imagen">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            
+        </nav>
+    </div>
+
+    <div class="selector_paint">
+        <div class="linner">
+            <hr class="linner_paint">
+        </div>
+        <div class="picker_color">
+            <input class="picker_paint" type="color" id="color-picker" value="#000000" />
+        </div>
+
+        <div class="selector_tamano">
+            <div class="selector_tamano_input" id="numbercontainer">
+                <div class="number_tamano_input" id="numberDisplay">
+                    1
+                </div>
+            </div>
+        </div>
+
+        <div class="historial_color"></div>
+            <div class="historial_color_boton" id="color_chse">
+            </div>
+        </div>
+    </div>
+    
+    <div class="color-history linea_historial_color" id="color-history">
+        <div class="linner"></div>
+            <hr class="linner_paint">
+        </div>
+    </div>
+    
+
+    <script type="module" src="/paint/paint.js"></script>
+    <script src="/paint/zoom.js"></script>
+</body>
+
+</html>
