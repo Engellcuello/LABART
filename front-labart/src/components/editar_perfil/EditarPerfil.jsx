@@ -224,7 +224,7 @@ const EditarPerfil = () => {
             <div className="contenedor-formulario-completo">
                 <div className="contenedor-logo">
                     <img
-                        src="https://soysena-my.sharepoint.com/:i:/g/personal/masisa2_soy_sena_edu_co/EYnGzbcWxqtOmeAQCvxmLawBwxaUtKC5RFK2GEBfyucQOg?e=KY8EWP"
+                        src={logo}
                         alt="Logo del aplicativo"
                         className="logo-aplicativo"
                         style={{ filter: 'none' }}
