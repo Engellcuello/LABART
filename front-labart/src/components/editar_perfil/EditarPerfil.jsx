@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from '../../utils/axiosintance';
 import { useNavigate } from 'react-router-dom';
+import logo from '../../assets/img/concepto_logo.png';
 import Swal from 'sweetalert2';
 
 const EditarPerfil = () => {
@@ -223,7 +224,7 @@ const EditarPerfil = () => {
             <div className="contenedor-formulario-completo">
                 <div className="contenedor-logo">
                     <img
-                        src="/src/assets/img/concepto_logo.png"
+                        src={logo}
                         alt="Logo del aplicativo"
                         className="logo-aplicativo"
                         style={{ filter: 'none' }}
